@@ -38,7 +38,7 @@ router.get('/text/:text', async (req, res) => {
 })
 router.get('/textListe', async (req, res) => {
     try {
-        var files = fs.readdirSync('texts');
+        var files = fs.readdirSync('./texts');
         res.send(files).status(200)
     } catch (err) {
         res.send(err).status(404)
